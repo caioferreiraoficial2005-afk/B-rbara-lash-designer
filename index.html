@@ -376,6 +376,38 @@ nav .logo small{color:#e58ab3}nav.solid .logo small{color:var(--rose)}
 .bcard.cta{background:#c2457f}
 nav .links a[href="#agenda"]{color:#fff;background:#c2457f;padding:9px 14px}
 nav.solid .links a[href="#agenda"]{color:#fff}
+/* ajustes celular (24/11 14h30) */
+@media (max-width:900px){
+  /* botão Agendar no menu */
+  nav .links{display:flex!important;gap:0}
+  nav .links a{display:none}
+  nav .links a[href="#agenda"]{display:inline-block;color:#fff;background:var(--rose);padding:10px 16px;font-size:10px;letter-spacing:.28em}
+  /* avaliações num quadro certinho */
+  .quadro{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:auto;gap:10px;
+    grid-template-areas:"q1 q1" "f1 f2" "q3 f3" "q2 q2" "f4 f4"}
+  .quadro .mfoto,.quadro .q3{aspect-ratio:1/1}
+  .quadro .f4{aspect-ratio:16/10}
+  .quadro .q3{padding:18px 16px}
+  .quadro .q3 p{font-size:21px;line-height:1.15}
+  .quadro .q3 .quem-av small{display:none}
+  .quadro .depo{min-height:0}
+  .quadro .mfoto figcaption{font-size:8.5px;padding:7px 10px}
+  /* um tempo só seu: mostrar mais da direita da foto */
+  .estudio img{object-position:85% 50%!important}
+  /* do que você precisa: fotos mais visíveis e texto menor */
+  .faixa{min-height:300px;align-items:flex-end;padding:22px 20px 84px}
+  .faixa::after{background:linear-gradient(0deg,rgba(12,8,6,.78) 0%,rgba(12,8,6,.35) 45%,rgba(12,8,6,0) 75%)}
+  .faixa .mk b{font-size:27px;margin:6px 0 6px}
+  .faixa .mk em{font-size:13.5px;line-height:1.45}
+  .faixa .mk small{font-size:9.5px}
+}
+@media (max-width:900px){
+  .quadro .q3,.quadro .f3{aspect-ratio:auto}
+  .quadro .q3 p{font-size:20px;margin-bottom:14px}
+  .quadro .f3 img{height:100%}
+  .estudio img{filter:brightness(.9)!important}
+  .estudio::after{background:linear-gradient(0deg,rgba(6,4,3,.88) 0%,rgba(6,4,3,.35) 45%,transparent 75%)!important}
+}
 </style>
 </head>
 <body>
@@ -502,10 +534,10 @@ nav.solid .links a[href="#agenda"]{color:#fff}
     <div class="depo q1"><div class="dep-top"><span class="st">★★★★★</span><svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.9l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></div><p>Que local sensacional! O atendimento é sensacional e a profissional mais ainda.</p><div class="quem-av"><span class="av" style="background:#c2457f">L</span><div><b>Lívia Oliveira</b><small>Avaliação no Google</small></div></div></div>
     <figure class="mfoto f1"><img src="assets/m1.jpg" alt="Cliente com os cílios feitos" style="object-position:50% 45%"><figcaption>Cílios feitos no studio</figcaption></figure>
     <figure class="mfoto f2"><img src="assets/m2.jpg" alt="Detalhe da extensão de cílios" style="object-position:50% 42%"></figure>
-    <figure class="mfoto f3"><img src="assets/m3.jpg" alt="Cliente na maca durante a aplicação" style="object-position:50% 34%"><figcaption>Durante a aplicação</figcaption></figure>
+    <figure class="mfoto f3"><img src="assets/m3.jpg" alt="Cliente da Lashe" style="object-position:50% 34%"><figcaption>Cliente da Lashe</figcaption></figure>
     <div class="depo q3"><div class="dep-top"><span class="st">★★★★★</span><svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.9l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></div><p>Simplesmente a melhor da cidade!</p><div class="quem-av"><span class="av" style="background:#a83a6c">E</span><div><b>Eliza Silva</b><small>Avaliação no Google</small></div></div></div>
     <div class="depo q2"><div class="dep-top"><span class="st">★★★★★</span><svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.9l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg></div><p>Atendimento e trabalho incrível. Ótima profissional! Vou voltar sempre</p><div class="quem-av"><span class="av" style="background:#7a1f4d">S</span><div><b>Sarah Fernandes</b><small>Avaliação no Google</small></div></div></div>
-    <figure class="mfoto f4"><img src="assets/m4.jpg" alt="Lash lifting" style="object-position:45% 35%"><figcaption>Lash lifting</figcaption></figure>
+    <figure class="mfoto f4"><img src="assets/m4.jpg" alt="Clientes da Lashe" style="object-position:45% 35%"><figcaption>Clientes da Lashe</figcaption></figure>
   </div>
   <div class="onde">
     <div class="onde-tx rv">
